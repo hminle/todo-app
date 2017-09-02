@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormGroup, FormControl } from 'react-bootstrap';
+//import { FormGroup, FormControl } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 var ESCAPE_KEY = 27;
@@ -23,14 +23,12 @@ class TodoInput extends Component {
 
   render() {
     return (
-      <div>
-        <FormGroup bsSize="large">
+      <div className="input-large">
             <input
             type="text"
             placeholder="What you need to do?" 
             onKeyDown={this.handleKeyDown.bind(this)}
             ref="txt" />
-        </FormGroup>
       </div>
     );
   }
