@@ -13,10 +13,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     var newItemKey = rootRef.child('app-todo/items').push().key;
-    rootRef.child('app-todo/items').push("job9");
-    var update = {};
-    update['app-todo/items/' + newItemKey] = 'job10';
-    rootRef.update(update);
+    // rootRef.child('app-todo/items').push("job9");
+    // var update = {};
+    // update['app-todo/items/' + newItemKey] = 'job10';
+    // rootRef.update(update);
   }
 
   render() {
