@@ -17,9 +17,6 @@ class TodoInput extends Component {
     }
   }
 
-  handleChange(event) {
-    event.preventDefault();
-  }
 
   render() {
     return (

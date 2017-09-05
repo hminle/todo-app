@@ -8,6 +8,16 @@ import { Provider } from 'react-redux';
 import store from './storeConfig.js';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    var newItemKey = firebase.database().ref().child('app-todo/items').push().key;
+    firebase.database().ref().child('app-todo/items').push("job6");
+    var update = {};
+    update['app-todo/items/' + newItemKey] = 'job7';
+    firebase.database().ref().update(update);
+  }
+
   render() {
     return (
       <Provider store={store}>
