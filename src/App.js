@@ -6,16 +6,17 @@ import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 import { Provider } from 'react-redux';
 import store from './storeConfig.js';
+import rootRef from './firebaseConfig';
 
 class App extends Component {
 
   constructor(props) {
     super(props);
-    var newItemKey = firebase.database().ref().child('app-todo/items').push().key;
-    firebase.database().ref().child('app-todo/items').push("job6");
+    var newItemKey = rootRef.child('app-todo/items').push().key;
+    rootRef.child('app-todo/items').push("job9");
     var update = {};
-    update['app-todo/items/' + newItemKey] = 'job7';
-    firebase.database().ref().update(update);
+    update['app-todo/items/' + newItemKey] = 'job10';
+    rootRef.update(update);
   }
 
   render() {
