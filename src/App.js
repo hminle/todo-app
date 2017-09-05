@@ -6,7 +6,7 @@ import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 import { Provider } from 'react-redux';
 import store from './storeConfig.js';
-import rootRef from './firebaseConfig';
+//import rootRef from './firebaseConfig';
 
 class App extends Component {
 
